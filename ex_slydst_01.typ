@@ -1,4 +1,6 @@
 #import "@preview/slydst:0.1.4": *
+#import "@preview/codelst:2.0.2": sourcecode
+
 
 #show: slides.with(
   title: "Learning Slydst",
@@ -42,6 +44,27 @@ $ alpha + beta $
 ==
 
 Slide without title?
+
+
+== Test source code
+
+#text(font: "JuliaMono", size: 11pt)[
+#sourcecode[```julia
+mutable struct MyStruct
+  Γ::Float64
+  Δ::Float64
+  x::ComplexF64
+  v::Vector{Int64}
+end
+
+function my_func()
+  return α + β
+end
+```]
+]
+
+Above is an example of Julia source code.
+
 
 ==
 
