@@ -10,6 +10,8 @@
   title-color: none,
 )
 
+#set par(justify: true)
+
 == First slide
 
 Hello from efefer
@@ -76,3 +78,44 @@ $ "fraction" = ("nominator")/("denominator") $
     image("images/kucing1.png"),
   ),
 )
+
+
+== Example grid again
+
+#grid(
+  columns: (1fr, 1fr),
+  rows: (1fr),
+  gutter: 10pt,
+  [
+    #lorem(80)
+
+    This is a text again
+
+    $alpha + beta$
+
+    Display equation
+    $ alpha + Gamma $
+  ],
+  [
+    #lorem(20)
+    #figure(
+      image("images/kucing1.png", height: 30%),
+      caption: "A beautiful cat"
+    )
+  ]
+)
+
+== Mixed paragraph setting
+
+#lorem(50)
+
+#text(font: "Liberation Sans", size: 11pt)[
+  #lorem(30)
+]
+
+#set par(justify: false)
+#lorem(30)
+
+An equation:
+$ sin(2 pi x) cos((2 pi x)/L) $
+
